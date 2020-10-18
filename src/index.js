@@ -30,12 +30,10 @@ function changeBackground() {
         document.body.style.backgroundColor =
             colors[randomIntegerFromInterval(0, 5)];
     }, 1000);
-    isActive = true;
     refs.startBtn.disabled = true;
 }
 
 refs.stopBtn.addEventListener('click', () => {
     clearInterval(intervalId);
-    isActive = false;
     refs.startBtn.disabled = false;
 });
